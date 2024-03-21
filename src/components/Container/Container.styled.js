@@ -1,0 +1,26 @@
+import styled from 'styled-components';
+
+export const Wrap = styled.div`
+  margin-top: 54px;
+  margin: 0 auto;
+
+  /* @media screen and (max-width: 360px) {
+      max-width: 360px;
+      width: 100%;
+    } */
+
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+    max-width: 480px;
+    padding: 0 72px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    width: 768px;
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding: 0 96px;
+  }
+`;
