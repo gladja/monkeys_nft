@@ -4,11 +4,6 @@ export const Wrap = styled.div`
   margin-top: 54px;
   margin: 0 auto;
 
-  /* @media screen and (max-width: 360px) {
-      max-width: 360px;
-      width: 100%;
-    } */
-
   @media screen and (min-width: 360px) and (max-width: 480px) {
     max-width: 480px;
     padding: 0 72px;

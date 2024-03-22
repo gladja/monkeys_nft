@@ -10,11 +10,15 @@ import {
   WrapTitle,
 } from './Hero.style';
 import hero_mob from '../../assets/images/hero_mob.png';
+import { Logo } from '../Logo/Logo';
+import { Header } from '../Header';
 
 export const Hero = () => {
   return (
     <Wrap>
       <Bg>
+        <Logo />
+        <Header />
         <WrapTitle>
           <HeroText>diD yOu seE iT ?</HeroText>
           <Title>

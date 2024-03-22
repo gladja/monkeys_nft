@@ -49,7 +49,7 @@ export const HeroText = styled.p`
     font-size: 20px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     font-size: 24px;
   }
 `;
