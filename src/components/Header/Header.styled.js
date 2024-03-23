@@ -20,8 +20,23 @@ export const Btn = styled.li`
   background: rgba(30, 30, 30, 0.1);
   cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media screen and (min-width: 1280px) {
     width: 80px;
     height: 80px;
+  }
+`;
+
+export const Svg = styled.svg`
+  width: 24px;
+  height: 24px;
+
+  transition: fill 0.5s;
+
+  &:hover {
+    fill: white;
   }
 `;
