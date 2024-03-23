@@ -7,9 +7,7 @@ function App() {
     <>
       <Theme>
         <Hero />
-        <Container>
-          <h1>Hi</h1>
-        </Container>
+        <Container></Container>
         <GlobalStyle />
       </Theme>
     </>
