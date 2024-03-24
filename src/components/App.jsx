@@ -4,6 +4,7 @@ import { About } from './About';
 import { Container } from './Container';
 import { Hero } from './Hero';
 import { BanerAbout } from './BanerAbout';
+import { MindMap } from './MindMap/MindMap';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -30,6 +31,9 @@ function App() {
               <About width={width} />
             </Container>
             <BanerAbout />
+            <Container>
+              <MindMap width={width} />
+            </Container>
           </>
         )}
         <GlobalStyle />

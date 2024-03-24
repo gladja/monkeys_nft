@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-import BiroScriptPlus from '../assets/fonts/BiroScriptPlus.ttf';
+import BiroScriptPlus from '../assets/fonts/BiroScriptPlus-Bold.ttf';
 import RightGrotesk from '../assets/fonts/RightGrotesk-CompactBlack.otf';
 import MessinaSansMono from '../assets/fonts/MessinaSansMono-Regular.ttf';
 

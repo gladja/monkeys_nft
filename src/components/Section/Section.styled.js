@@ -15,7 +15,7 @@ export const Wrap = styled.section`
     margin: 80px auto 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     margin: 120px auto 0;
   }
 `;
