@@ -81,6 +81,7 @@ export const MenuNav = styled.ul`
   cursor: pointer;
 
   border-radius: 12px 0 0 12px;
+  margin-bottom: 100px;
 `;
 
 export const MenuText = styled.a`
