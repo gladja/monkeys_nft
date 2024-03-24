@@ -120,6 +120,5 @@ export const Svg = styled.svg`
   @media screen and (min-width: 768px) {
     width: 24px;
     height: 24px;
-    /* fill: #171717; */
   }
 `;

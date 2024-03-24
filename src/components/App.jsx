@@ -7,6 +7,8 @@ import { BanerAbout } from './BanerAbout';
 import { MindMap } from './MindMap/MindMap';
 import { Faq } from './Faq/Faq';
 import { Collection } from './Collection/Collection';
+import { ContactUs } from './ContactUs';
+import { Footer } from './Footer/Footer';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -37,6 +39,8 @@ function App() {
               <MindMap width={width} />
               <Faq width={width} />
               <Collection width={width} />
+              <ContactUs />
+              <Footer />
             </Container>
           </>
         )}
