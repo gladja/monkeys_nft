@@ -1,9 +1,10 @@
 import { styled } from 'styled-components';
 
 export const WrapBtn = styled.div`
-  margin-top: 24px;
+  margin: 24px auto 0;
   display: flex;
   justify-content: space-around;
+  width: 216px;
 `;
 
 export const Btn = styled.button`

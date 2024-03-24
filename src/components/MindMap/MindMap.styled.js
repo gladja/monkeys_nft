@@ -1,13 +1,5 @@
 import styled from 'styled-components';
-
-export const Title = styled.h2`
-  font-family: RightGrotesk, sans-serif;
-  font-size: 44px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 24px;
-`;
-
+//
 export const WrapSlider = styled.div`
   margin: 0 auto;
   width: 216px;

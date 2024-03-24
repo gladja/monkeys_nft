@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import { SliderBtn } from '../SliderBtn';
-import { ItemRed, Svg, TitleItem, WrapSlider } from '../MindMap.styled';
+import { ItemRed, Svg, TitleItem } from '../MindMap.styled';
+import { WrapSlider } from './Slider.styled';
 import sprite from '../../../assets/images/sprite.svg';
 import value from '../data.json';
 import { Card } from '../Card';
@@ -11,7 +12,7 @@ export const Slider = () => {
   return (
     <div>
       <WrapSlider>
-        <Swiper spaceBetween={50} slidesPerView={1}>
+        <Swiper spaceBetween={50} slidesPerView={1} slideToClickedSlide="true">
           {value.map(({ id, title, text }) => (
             <SwiperSlide key={id}>
               <Card title={title} text={text} />

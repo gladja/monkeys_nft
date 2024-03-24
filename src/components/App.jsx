@@ -5,6 +5,8 @@ import { Container } from './Container';
 import { Hero } from './Hero';
 import { BanerAbout } from './BanerAbout';
 import { MindMap } from './MindMap/MindMap';
+import { Faq } from './Faq/Faq';
+import { Collection } from './Collection/Collection';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -33,6 +35,8 @@ function App() {
             <BanerAbout />
             <Container>
               <MindMap width={width} />
+              <Faq width={width} />
+              <Collection width={width} />
             </Container>
           </>
         )}

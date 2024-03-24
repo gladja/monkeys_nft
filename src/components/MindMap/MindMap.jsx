@@ -1,14 +1,15 @@
 import { Section } from '../Section';
-import { Grid, ItemRed, Svg, Title, TitleItem } from './MindMap.styled';
+import { Grid, ItemRed, Svg, TitleItem } from './MindMap.styled';
 import sprite from '../../assets/images/sprite.svg';
 import { Slider } from './Slider';
 import { Card } from './Card';
 import value from './data.json';
+import { Title } from '../Title';
 
 export const MindMap = ({ width }) => {
   return (
     <Section>
-      <Title>MindMap</Title>
+      <Title text="Mind Map" />
       {width < 768 ? (
         <Slider />
       ) : (
