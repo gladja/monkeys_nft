@@ -3,6 +3,7 @@ import { Theme, GlobalStyle } from '../styles';
 import { About } from './About';
 import { Container } from './Container';
 import { Hero } from './Hero';
+import { BanerAbout } from './BanerAbout';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -24,9 +25,12 @@ function App() {
       <Theme>
         <Hero menu={menu} setMenu={setMenu} width={width} />
         {(!menu || (width > 768 && menu)) && (
-          <Container>
-            <About width={width} />
-          </Container>
+          <>
+            <Container>
+              <About width={width} />
+            </Container>
+            <BanerAbout />
+          </>
         )}
         <GlobalStyle />
       </Theme>

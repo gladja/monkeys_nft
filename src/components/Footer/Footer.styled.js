@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Text = styled.footer`
   width: 216px;
-  /* margin: 60px auto 24px; */
+  margin: 60px 0 0;
   text-align: center;
   font-size: 12px;
   text-transform: uppercase;
