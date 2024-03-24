@@ -13,13 +13,12 @@ export const Wrap = styled.div`
     max-width: 480px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
-    width: 768px;
-    padding: 0 32px;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    max-width: 591px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1280px;
-    padding: 0 96px;
+    max-width: 1030px;
   }
 `;

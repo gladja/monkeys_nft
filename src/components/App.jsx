@@ -25,7 +25,7 @@ function App() {
         <Hero menu={menu} setMenu={setMenu} width={width} />
         {(!menu || (width > 768 && menu)) && (
           <Container>
-            <About />
+            <About width={width} />
           </Container>
         )}
         <GlobalStyle />

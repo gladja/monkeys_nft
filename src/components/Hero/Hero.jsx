@@ -10,7 +10,8 @@ import {
   WrapTitle,
 } from './Hero.style';
 import hero_mob from '../../assets/images/hero_mob.png';
-// import hero_dec from '../../assets/images/hero_des.png';
+import hero_tab from '../../assets/images/hero_tab.png';
+import hero_dec from '../../assets/images/hero_des.png';
 import { Logo } from '../Logo/Logo';
 import { Header } from '../Header';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
@@ -32,7 +33,9 @@ export const Hero = ({ menu, setMenu, width }) => {
               </Title>
               <HeroText>Apes aRe eveRywhere</HeroText>
             </WrapTitle>
-            <Img src={hero_mob} alt="ape" />
+            {width < 768 && <Img src={hero_mob} alt="ape" />}
+            {width > 768 && width < 1280 && <Img src={hero_tab} alt="ape" />}
+            {width > 1280 && <Img src={hero_dec} alt="ape" />}
             <WrapText>
               <Btn>Meet apes</Btn>
               <HeroTextItem>
