@@ -7,15 +7,19 @@ import {
   MenuText,
   Nav,
   Svg,
-  Text,
   Wrap,
+  WrapFooter,
+  WrapLogo,
 } from './BurgerMenu.styled';
 import sprite from '../../assets/images/sprite.svg';
+import { Footer } from '../Footer/Footer';
 
 export const BurgerMenu = ({ menu, setMenu }) => {
   return (
     <Wrap>
-      <Logo color={'white'} menu={menu.toString()} />
+      <WrapLogo>
+        <Logo color={'white'} menu={menu.toString()} />
+      </WrapLogo>
       <Nav>
         <Menu>
           <MenuBtn>
@@ -74,8 +78,9 @@ export const BurgerMenu = ({ menu, setMenu }) => {
           </li>
         </MenuNav>
       </Nav>
-
-      <Text>© Yacht ape 2024 all rights reserved</Text>
+      <WrapFooter>
+        <Footer />
+      </WrapFooter>
     </Wrap>
   );
 };

@@ -4,6 +4,12 @@ export const Wrap = styled.div`
   padding: 24px 18px 0;
 `;
 
+export const WrapLogo = styled.div`
+  position: absolute;
+  top: 80px;
+  left: 20px;
+`;
+
 export const Nav = styled.nav`
   display: flex;
   margin-left: auto;
@@ -91,13 +97,9 @@ export const MenuText = styled.a`
   }
 `;
 
-export const Text = styled.p`
+export const WrapFooter = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 10%;
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.white};
 `;
