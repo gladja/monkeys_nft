@@ -1,13 +1,7 @@
 import { Section } from '../Section';
 import { Title } from '../Title/';
 
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
+import { AccordionItemHeading } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import {
   TitleWrap,
@@ -19,50 +13,35 @@ import {
   WrapAccord,
   TitleBlock,
   Number,
+  Img,
 } from './Faq.styled';
+import value from './data.json';
+import { img } from './images';
 
-export const Faq = () => {
+export const Faq = ({ width }) => {
   return (
     <Section>
       <Title text="Faq" />
       <WrapAccord>
-        <AccordionCustom>
-          <AccordionItemCustom>
-            <AccordionItemHeading>
-              <AccordionItemButtonCustom>
-                <TitleBlock>
-                  <Number>[&nbsp;1&nbsp;]</Number>
-                  <TitleWrap>WHAT IS AN NFT COLLECTION?</TitleWrap>
-                </TitleBlock>
-              </AccordionItemButtonCustom>
-            </AccordionItemHeading>
-            <AccordionItemPanelCustom>
-              <Text>
-                An NFT collection is a group of unique digital assets, each
-                represented by a non-fungible token, typically created around a
-                specific theme or style.
-              </Text>
-            </AccordionItemPanelCustom>
-          </AccordionItemCustom>
-
-          <AccordionItemCustom>
-            <AccordionItemHeading>
-              <AccordionItemButtonCustom>
-                <TitleBlock>
-                  <Number>[&nbsp;2&nbsp;]</Number>
-                  <TitleWrap>
-                    HOW DO I PURCHASE NFTS FROM A COLLECTION?
-                  </TitleWrap>
-                </TitleBlock>
-              </AccordionItemButtonCustom>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <Text>
-                Launch your own token, the proceeds of which will go to a global
-                fund to LAUNCH YACHT CLUB AND PROMOTE it
-              </Text>
-            </AccordionItemPanel>
-          </AccordionItemCustom>
+        <AccordionCustom preExpanded={'1'}>
+          {value.map(({ id, title, text }, i) => (
+            <AccordionItemCustom key={id} uuid={id}>
+              <AccordionItemHeading>
+                <AccordionItemButtonCustom>
+                  <TitleBlock>
+                    <Number>[&nbsp;{id}&nbsp;]</Number>
+                    <TitleWrap>{title}</TitleWrap>
+                  </TitleBlock>
+                </AccordionItemButtonCustom>
+              </AccordionItemHeading>
+              <AccordionItemPanelCustom>
+                <Text>
+                  {width > 768 && <Img src={img[i]} alt="ape foto" />}
+                  {text}
+                </Text>
+              </AccordionItemPanelCustom>
+            </AccordionItemCustom>
+          ))}
         </AccordionCustom>
       </WrapAccord>
     </Section>

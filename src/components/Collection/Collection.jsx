@@ -21,8 +21,6 @@ export const Collection = ({ width }) => {
     }
   };
 
-  console.log(imageValue());
-
   return (
     <Section>
       <Title text="Collection" />
