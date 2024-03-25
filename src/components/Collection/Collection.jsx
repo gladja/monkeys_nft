@@ -22,22 +22,25 @@ export const Collection = ({ width }) => {
   };
 
   return (
-    <Section>
-      <Title text="Collection" />
-      <WrapSlider>
-        <Swiper
-          spaceBetween={24}
-          slidesPerView={imageValue()}
-          slideToClickedSlide="true"
-        >
-          {img.map((itm, i) => (
-            <SwiperSlide key={i}>
-              <Img src={itm} alt="foto ape" />
-            </SwiperSlide>
-          ))}
-          <SliderBtn />
-        </Swiper>
-      </WrapSlider>
-    </Section>
+    <>
+      <div id={'arts'}></div>
+      <Section>
+        <Title text="Collection" />
+        <WrapSlider>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={imageValue()}
+            slideToClickedSlide="true"
+          >
+            {img.map((itm, i) => (
+              <SwiperSlide key={i}>
+                <Img src={itm} alt="foto ape" />
+              </SwiperSlide>
+            ))}
+            <SliderBtn />
+          </Swiper>
+        </WrapSlider>
+      </Section>
+    </>
   );
 };

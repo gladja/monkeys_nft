@@ -8,30 +8,33 @@ import { Title } from '../Title';
 
 export const MindMap = ({ width }) => {
   return (
-    <Section>
-      <Title text="Mind Map" />
-      {width < 768 ? (
-        <Slider />
-      ) : (
-        <Grid>
-          {value.map(({ id, title, text }) => (
-            <li key={id}>
-              <Card title={title} text={text} />
-            </li>
-          ))}
+    <>
+      <div id={'mind'}></div>
+      <Section>
+        <Title text="Mind Map" />
+        {width < 768 ? (
+          <Slider />
+        ) : (
+          <Grid>
+            {value.map(({ id, title, text }) => (
+              <li key={id}>
+                <Card title={title} text={text} />
+              </li>
+            ))}
 
-          <li>
-            <a href="#">
-              <ItemRed>
-                <Svg>
-                  <use href={`${sprite}#arrow`}></use>
-                </Svg>
-                <TitleItem>Learn more in mind map</TitleItem>
-              </ItemRed>
-            </a>
-          </li>
-        </Grid>
-      )}
-    </Section>
+            <li>
+              <a href="#">
+                <ItemRed>
+                  <Svg>
+                    <use href={`${sprite}#arrow`}></use>
+                  </Svg>
+                  <TitleItem>Learn more in mind map</TitleItem>
+                </ItemRed>
+              </a>
+            </li>
+          </Grid>
+        )}
+      </Section>
+    </>
   );
 };

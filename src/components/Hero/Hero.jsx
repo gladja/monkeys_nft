@@ -37,7 +37,13 @@ export const Hero = ({ menu, setMenu, width }) => {
             {width > 768 && width < 1280 && <Img src={hero_tab} alt="ape" />}
             {width > 1280 && <Img src={hero_dec} alt="ape" />}
             <WrapText>
-              <Btn>Meet apes</Btn>
+              <Btn
+                type="button"
+                onClick={() => (window.location.href = '#mint')}
+                href="#mint"
+              >
+                Meet apes
+              </Btn>
               <HeroTextItem>
                 Yacht Ape is a collection of unique digital apes that you can
                 own in NFT format

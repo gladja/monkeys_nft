@@ -52,27 +52,27 @@ export const BurgerMenu = ({ menu, setMenu }) => {
 
         <MenuNav>
           <li>
-            <MenuText href="#" onClick={() => setMenu(false)}>
+            <MenuText href="#about" onClick={() => setMenu(false)}>
               ABOUT
             </MenuText>
           </li>
           <li>
-            <MenuText href="#" onClick={() => setMenu(false)}>
+            <MenuText href="#mind" onClick={() => setMenu(false)}>
               M-MAP
             </MenuText>
           </li>
           <li>
-            <MenuText href="#" onClick={() => setMenu(false)}>
+            <MenuText href="#faq" onClick={() => setMenu(false)}>
               FAQ
             </MenuText>
           </li>
           <li>
-            <MenuText href="#" onClick={() => setMenu(false)}>
+            <MenuText href="#arts" onClick={() => setMenu(false)}>
               ARTS
             </MenuText>
           </li>
           <li>
-            <MenuText href="#" onClick={() => setMenu(false)}>
+            <MenuText href="#mint" onClick={() => setMenu(false)}>
               MINT
             </MenuText>
           </li>

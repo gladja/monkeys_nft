@@ -20,30 +20,33 @@ import { img } from './images';
 
 export const Faq = ({ width }) => {
   return (
-    <Section>
-      <Title text="Faq" />
-      <WrapAccord>
-        <AccordionCustom preExpanded={'1'}>
-          {value.map(({ id, title, text }, i) => (
-            <AccordionItemCustom key={id} uuid={id}>
-              <AccordionItemHeading>
-                <AccordionItemButtonCustom>
-                  <TitleBlock>
-                    <Number>[&nbsp;{id}&nbsp;]</Number>
-                    <TitleWrap>{title}</TitleWrap>
-                  </TitleBlock>
-                </AccordionItemButtonCustom>
-              </AccordionItemHeading>
-              <AccordionItemPanelCustom>
-                <Text>
-                  {width > 768 && <Img src={img[i]} alt="ape foto" />}
-                  {text}
-                </Text>
-              </AccordionItemPanelCustom>
-            </AccordionItemCustom>
-          ))}
-        </AccordionCustom>
-      </WrapAccord>
-    </Section>
+    <>
+      <div id={'faq'}></div>
+      <Section>
+        <Title text="Faq" />
+        <WrapAccord>
+          <AccordionCustom preExpanded={'1'}>
+            {value.map(({ id, title, text }, i) => (
+              <AccordionItemCustom key={id} uuid={id}>
+                <AccordionItemHeading>
+                  <AccordionItemButtonCustom>
+                    <TitleBlock>
+                      <Number>[&nbsp;{id}&nbsp;]</Number>
+                      <TitleWrap>{title}</TitleWrap>
+                    </TitleBlock>
+                  </AccordionItemButtonCustom>
+                </AccordionItemHeading>
+                <AccordionItemPanelCustom>
+                  <Text>
+                    {width > 768 && <Img src={img[i]} alt="ape foto" />}
+                    {text}
+                  </Text>
+                </AccordionItemPanelCustom>
+              </AccordionItemCustom>
+            ))}
+          </AccordionCustom>
+        </WrapAccord>
+      </Section>
+    </>
   );
 };

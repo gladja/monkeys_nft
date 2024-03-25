@@ -64,57 +64,50 @@ export const ContactUs = () => {
   };
 
   return (
-    <Section>
-      <Title text="Are you in?" />
-      <Wrap>
-        <div>
-          <Svg>
-            <use href={`${sprite}#cross`}></use>
-          </Svg>
-        </div>
-        <Text>
-          Join the YACHT APE community to be one of the first to receive our
-          limited edition NFT
-        </Text>
+    <>
+      <div id={'mint'}></div>
+      <Section>
+        <Title text="Are you in?" />
+        <Wrap>
+          <div>
+            <Svg>
+              <use href={`${sprite}#cross`}></use>
+            </Svg>
+          </div>
+          <Text>
+            Join the YACHT APE community to be one of the first to receive our
+            limited edition NFT
+          </Text>
 
-        <Formik
-          initialValues={initialValues}
-          validationSchema={schema}
-          onSubmit={handleSubmit}
-        >
-          <Form autoComplete="off">
-            <WrapInput>
-              <WrapSvg>
-                <Svg2>
-                  <use href={`${sprite}#discord`}></use>
-                </Svg2>
-              </WrapSvg>
-              <Input
-                type="text"
-                name="username"
-                component={CustomInput}
-                // placeholder="@username"
-              />
-            </WrapInput>
-            <Error name="username" component="div" />
-            <WrapInput>
-              <WrapSvg>
-                <Svg2>
-                  <use href={`${sprite}#mm`}></use>
-                </Svg2>
-              </WrapSvg>
-              <Input
-                type="text"
-                name="address"
-                component={CustomInput}
-                // placeholder="1x28601vsdfg31543cs"
-              />
-            </WrapInput>
-            <Error name="address" component="div" />
-            <Btn type="submit">MINT</Btn>
-          </Form>
-        </Formik>
-      </Wrap>
-    </Section>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={schema}
+            onSubmit={handleSubmit}
+          >
+            <Form autoComplete="off">
+              <WrapInput>
+                <WrapSvg>
+                  <Svg2>
+                    <use href={`${sprite}#discord`}></use>
+                  </Svg2>
+                </WrapSvg>
+                <Input type="text" name="username" component={CustomInput} />
+              </WrapInput>
+              <Error name="username" component="div" />
+              <WrapInput>
+                <WrapSvg>
+                  <Svg2>
+                    <use href={`${sprite}#mm`}></use>
+                  </Svg2>
+                </WrapSvg>
+                <Input type="text" name="address" component={CustomInput} />
+              </WrapInput>
+              <Error name="address" component="div" />
+              <Btn type="submit">MINT</Btn>
+            </Form>
+          </Formik>
+        </Wrap>
+      </Section>
+    </>
   );
 };

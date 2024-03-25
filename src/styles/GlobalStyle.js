@@ -21,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
     src: url(${MessinaSansMono});
   }
 
+  * {
+    scroll-behavior: smooth;
+  }
+
+
 body {
   font-family: "MessinaSansMono", sans-serif;
   font-weight: 400;
