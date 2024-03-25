@@ -95,8 +95,6 @@ export const TitleWrap = styled.h3`
   font-size: 20px;
   text-transform: uppercase;
 
-  /* color: ${(p) => console.log(p)}; */
-
   &:focus,
   &:hover,
   &:active {

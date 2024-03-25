@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Field, ErrorMessage } from 'formik';
 
 export const Svg = styled.svg`
   width: 36px;
@@ -50,9 +51,11 @@ export const Text = styled.p`
 export const WrapInput = styled.div`
   display: flex;
   margin-top: 24px;
+
+  position: relative;
 `;
 
-export const Input = styled.input`
+export const Input = styled(Field)`
   font-family: MessinaSansMono, sans-serif;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -80,6 +83,18 @@ export const Input = styled.input`
     font-size: 16px;
     line-height: calc(19 / 16);
     border-radius: 0 12px 12px 0;
+  }
+`;
+
+export const Error = styled(ErrorMessage)`
+  font-size: 10px;
+  line-height: calc(12 / 10);
+  color: ${({ theme }) => theme.colors.red};
+  position: absolute;
+  right: 30%;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
   }
 `;
 
