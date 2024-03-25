@@ -13,7 +13,6 @@ export const Menu = styled.ul`
 `;
 
 export const MenuNav = styled.ul`
-  /* @media screen and (min-width: 768px) { */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,7 +31,6 @@ export const MenuNav = styled.ul`
   height: 48px;
   padding: 0 10px;
   border-radius: 12px 0 0 12px;
-  /* } */
 
   @media screen and (min-width: 1280px) {
     width: 400px;
@@ -74,11 +72,6 @@ export const MenuText = styled.a`
     border-bottom: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  /* @media screen and (min-width: 760px) {
-    font-size: 12px;
-    color: ${({ theme }) => theme.colors.black};
-  } */
-
   @media screen and (min-width: 1280px) {
     font-size: 16px;
   }
@@ -96,9 +89,6 @@ export const MenuOpen = styled.a`
     color: ${({ theme }) => theme.colors.white};
     border-bottom: 1px solid ${({ theme }) => theme.colors.white};
   }
-  @media screen and (min-width: 760px) {
-    /* color: ${({ theme }) => theme.colors.white}; */
-  }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
@@ -110,8 +100,6 @@ export const Svg = styled.svg`
   height: 16px;
 
   transition: fill 0.3s;
-
-  /* fill: ${({ type }) => (type === 'true' ? 'white' : 'black')}; */
 
   &:hover {
     fill: white;

@@ -65,13 +65,11 @@ export const BlockWrap = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 269px;
-    /* font-size: 16px; */
     margin: 68px 0 36px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 417px;
-    /* font-size: 24px; */
     margin: 56px 0 40px;
   }
 `;

@@ -5,12 +5,6 @@ export const Svg = styled.svg`
   width: 36px;
   height: 36px;
   margin: 0 auto 16px;
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1280px) {
-  }
 `;
 
 export const Wrap = styled.div`
@@ -20,10 +14,6 @@ export const Wrap = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
-  @media screen and (min-width: 360px) and (max-width: 480px) {
-    /* width: 100%; */
-  }
 
   @media screen and (min-width: 768px) {
     width: 397px;
@@ -48,11 +38,13 @@ export const Text = styled.p`
   }
 `;
 
+export const WrapInputBox = styled.div`
+  position: relative;
+`;
+
 export const WrapInput = styled.div`
   display: flex;
   margin-top: 24px;
-
-  position: relative;
 `;
 
 export const Input = styled(Field)`
@@ -91,7 +83,11 @@ export const Error = styled(ErrorMessage)`
   line-height: calc(12 / 10);
   color: ${({ theme }) => theme.colors.red};
   position: absolute;
-  right: 30%;
+  margin-top: 2%;
+  right: 0;
+
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 12px;
@@ -147,9 +143,6 @@ export const Btn = styled.button`
 
   &:hover {
     color: ${({ theme }) => theme.colors.black};
-  }
-
-  @media screen and (min-width: 768px) {
   }
 
   @media screen and (min-width: 1280px) {

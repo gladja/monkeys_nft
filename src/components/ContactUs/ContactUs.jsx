@@ -11,6 +11,7 @@ import {
   WrapInput,
   Btn,
   Error,
+  WrapInputBox,
 } from './ContactUs.styled';
 import { Formik, Form, getIn } from 'formik';
 import * as yup from 'yup';
@@ -26,7 +27,7 @@ const schema = yup.object().shape({
   address: yup
     .string()
     .matches(nameRegex, 'WRONG ADDRESS')
-    .min(24)
+    .min(24, 'MUST 24 SYMBOL')
     .required('REQUIRED FIEID'),
 });
 
@@ -59,7 +60,7 @@ function CustomInput({ field, form: { errors } }) {
 
 export const ContactUs = () => {
   const handleSubmit = (v, a) => {
-    toast.info('Data successfully sent.');
+    toast.info('Successfully sent');
     a.resetForm();
   };
 
@@ -85,24 +86,28 @@ export const ContactUs = () => {
             onSubmit={handleSubmit}
           >
             <Form autoComplete="off">
-              <WrapInput>
-                <WrapSvg>
-                  <Svg2>
-                    <use href={`${sprite}#discord`}></use>
-                  </Svg2>
-                </WrapSvg>
-                <Input type="text" name="username" component={CustomInput} />
-              </WrapInput>
-              <Error name="username" component="div" />
-              <WrapInput>
-                <WrapSvg>
-                  <Svg2>
-                    <use href={`${sprite}#mm`}></use>
-                  </Svg2>
-                </WrapSvg>
-                <Input type="text" name="address" component={CustomInput} />
-              </WrapInput>
-              <Error name="address" component="div" />
+              <WrapInputBox>
+                <WrapInput>
+                  <WrapSvg>
+                    <Svg2>
+                      <use href={`${sprite}#discord`}></use>
+                    </Svg2>
+                  </WrapSvg>
+                  <Input type="text" name="username" component={CustomInput} />
+                </WrapInput>
+                <Error name="username" component="div" />
+              </WrapInputBox>
+              <WrapInputBox>
+                <WrapInput>
+                  <WrapSvg>
+                    <Svg2>
+                      <use href={`${sprite}#mm`}></use>
+                    </Svg2>
+                  </WrapSvg>
+                  <Input type="text" name="address" component={CustomInput} />
+                </WrapInput>
+                <Error name="address" component="div" />
+              </WrapInputBox>
               <Btn type="submit">MINT</Btn>
             </Form>
           </Formik>
