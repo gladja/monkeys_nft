@@ -1061,7 +1061,7 @@ From the WAI-ARIA spec (https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)
   line-height: calc(12 / 10);
   color: ${({theme:e})=>e.colors.red};
   position: absolute;
-  margin-top: 2%;
+  margin-top: 3px;
   right: 0;
 
   @media screen and (min-width: 360px) and (max-width: 480px) {
