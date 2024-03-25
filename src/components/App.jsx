@@ -9,6 +9,8 @@ import { Faq } from './Faq/Faq';
 import { Collection } from './Collection/Collection';
 import { ContactUs } from './ContactUs';
 import { Footer } from './Footer/Footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -46,6 +48,7 @@ function App() {
         )}
         <GlobalStyle />
       </Theme>
+      <ToastContainer autoClose={3000} theme="dark" position="top-right" />
     </>
   );
 }

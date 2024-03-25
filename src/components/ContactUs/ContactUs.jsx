@@ -14,10 +14,20 @@ import {
 } from './ContactUs.styled';
 import { Formik, Form, getIn } from 'formik';
 import * as yup from 'yup';
+import { toast } from 'react-toastify';
+
+const nameRegex = /^[A-Za-z@0-9]+$/;
 
 const schema = yup.object().shape({
-  username: yup.string().required(),
-  address: yup.string().required(),
+  username: yup
+    .string()
+    .matches(nameRegex, 'WRONG DISCORD')
+    .required('REQUIRED FIEID'),
+  address: yup
+    .string()
+    .matches(nameRegex, 'WRONG ADDRESS')
+    .min(24)
+    .required('REQUIRED FIEID'),
 });
 
 const initialValues = {
@@ -49,8 +59,7 @@ function CustomInput({ field, form: { errors } }) {
 
 export const ContactUs = () => {
   const handleSubmit = (v, a) => {
-    console.log(v);
-    console.log(a);
+    toast.info('Data successfully sent.');
     a.resetForm();
   };
 
