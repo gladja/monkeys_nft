@@ -83,7 +83,7 @@ export const Error = styled(ErrorMessage)`
   line-height: calc(12 / 10);
   color: ${({ theme }) => theme.colors.red};
   position: absolute;
-  margin-top: 2%;
+  margin-top: 3px;
   right: 0;
 
   @media screen and (min-width: 360px) and (max-width: 480px) {
