@@ -9,6 +9,11 @@ export const Text = styled.footer`
   color: ${({ theme }) => theme.colors.white};
 
   @media screen and (min-width: 768px) {
-    /* margin: 80px auto 40px; */
+    margin: 80px auto 40px;
+    width: 273px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: 120px auto 40px;
   }
 `;

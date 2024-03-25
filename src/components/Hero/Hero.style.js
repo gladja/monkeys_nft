@@ -137,10 +137,6 @@ export const Btn = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
 
-  @media screen and (min-width: 360px) and (max-width: 480px) {
-    /* width: 63%; */
-  }
-
   @media screen and (min-width: 480px) {
     width: 283px;
   }

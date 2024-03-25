@@ -19,6 +19,18 @@ export const Wrap = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+    /* width: 100%; */
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 397px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 581px;
+  }
 `;
 
 export const Text = styled.p`
@@ -28,6 +40,11 @@ export const Text = styled.p`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: calc(29 / 24);
+  }
 `;
 
 export const WrapInput = styled.div`
@@ -38,6 +55,7 @@ export const WrapInput = styled.div`
 export const Input = styled.input`
   font-family: MessinaSansMono, sans-serif;
   font-size: 12px;
+  line-height: calc(14 / 12);
   width: 168px;
   height: 48px;
   border-radius: 0 8px 8px 0;
@@ -50,6 +68,19 @@ export const Input = styled.input`
   &:focus {
     border: 1px solid white;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 333px;
+    height: 64px;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    border-radius: 0 12px 12px 0;
+  }
 `;
 
 export const WrapSvg = styled.div`
@@ -60,6 +91,12 @@ export const WrapSvg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px 0 0 12px;
+  }
 `;
 
 export const Svg2 = styled.svg`
@@ -95,5 +132,15 @@ export const Btn = styled.button`
 
   &:hover {
     color: ${({ theme }) => theme.colors.black};
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 70px;
+
+    font-size: 34px;
+    border-radius: 12px;
   }
 `;
